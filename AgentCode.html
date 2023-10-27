@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agent Code Form</title>
+        <script>
+            // JavaScript  code to extract the agent code from the URL and pre-fill the form
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get the agent code from the URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const agentCode = urlParams.get("agentcode");
+
+                // Pre-fill the form field with the agent code
+                document.getElementById("agentCodeField").value = agentCode;
+
+            });
+        <script>
+    </head>
+    <body>
+        <h1>Agent Code Form</h1>
+        <form action="https://forms.google.com/forms/L6gYy6zZPoEoDVuB8" method="get">
+            <!-- Add your form fields here -->
+            Agent Code: <input type="text" id="agentCodeField" name="agentcode"><br>
+            <!-- Add other form fields as needed -->
+            <input type="submit" value="Submit">
+        </form>
+    <body>
+</html>
